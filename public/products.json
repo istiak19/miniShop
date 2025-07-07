@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "title": "Wireless Bluetooth Headphones",
+        "price": 49.99,
+        "image": "https://i.ibb.co/cXbwj9zn/bluetoothheadphones-2048px-0880.webp",
+        "description": "Comfortable over-ear headphones with deep bass and long battery life."
+    },
+    {
+        "id": 2,
+        "title": "Smart Fitness Watch",
+        "price": 69.99,
+        "image": "https://i.ibb.co/27xQKgWt/fitnesstrackers-2048px-09819-2x1-1-jpg-auto-webp-quality-75-crop-1.jpg",
+        "description": "Track your health, steps, and notifications on the go."
+    },
+    {
+        "id": 3,
+        "title": "Stylish Sunglasses",
+        "price": 29.99,
+        "image": "https://i.ibb.co/60L54H1m/police-sunglass-4.jpg",
+        "description": "UV-protected unisex sunglasses for all-day outdoor comfort."
+    },
+    {
+        "id": 4,
+        "title": "Portable Bluetooth Speaker",
+        "price": 39.99,
+        "image": "https://i.ibb.co/3YhWGZC3/best-portable-bluetooth-speakers-20231026-medium.jpg",
+        "description": "Loud and clear sound with waterproof design. Perfect for travel."
+    },
+    {
+        "id": 5,
+        "title": "Gaming Mouse RGB",
+        "price": 24.99,
+        "image": "https://i.ibb.co/HTSHPYbQ/133907.jpg",
+        "description": "Ergonomic design, high DPI, customizable RGB lighting."
+    },
+    {
+        "id": 6,
+        "title": "Classic Leather Wallet",
+        "price": 19.99,
+        "image": "https://i.ibb.co/rBFhfJP/sagebrown-burgundy-men-s-classic-leather-billfold-wallet-burgundy-30308986224813.jpg",
+        "description": "Premium genuine leather with multiple card slots and coin pocket."
+    },
+    {
+        "id": 7,
+        "title": "Noise Cancelling Earbuds",
+        "price": 59.99,
+        "image": "https://i.ibb.co/NghmdJfw/Pb-BRJvxo-Am4-BM7vfhh8-Zf-G.jpg",
+        "description": "Compact wireless earbuds with active noise cancellation and long battery life."
+    },
+    {
+        "id": 8,
+        "title": "Foldable Laptop Stand",
+        "price": 34.99,
+        "image": "https://i.ibb.co/Pz1d3G60/4562-70752.jpg",
+        "description": "Ergonomic aluminum stand compatible with all laptops, portable and adjustable."
+    }
+]
