@@ -1,69 +1,94 @@
-# React + TypeScript + Vite
+# 🛍️ MiniShop
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[**Live Demo → minishop-one.vercel.app**](https://minishop-one.vercel.app/)
 
-Currently, two official plugins are available:
+**MiniShop** is a modern, front-end web application designed to simulate an e-commerce shopping experience. Built with React and Tailwind CSS, the app leverages Redux for state management, Radix UI for accessible component primitives, and Vite for a lightning-fast development environment. The project features a clean UI, interactive components, and smooth user experiences tailored for scalability and maintainability.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 📑 Table of Contents
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* [📦 Tech Stack](#-tech-stack)
+* [🚀 Getting Started](#-getting-started)
+* [🧪 Available Scripts](#-available-scripts)
+* [✨ Features](#-features)
+* [🔧 Configuration](#-configuration)
+* [🔗 Live Demo](#-live-demo)
+* [📄 License](#-license)
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 📦 Tech Stack
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+* **React 19** – Component-based UI development
+* **Vite 7** – Fast build tool and dev server
+* **Redux Toolkit** – Simplified state management
+* **Tailwind CSS 4 + DaisyUI** – Utility-first styling and prebuilt components
+* **Radix UI** – Accessible UI primitives (`Dialog`, `Label`, `Slot`)
+* **Lucide-react** – Icon set for modern interfaces
+* **SweetAlert2** – Pop-up and modal alerts
+* **TypeScript** – Static typing for scalable JavaScript
+* **ESLint** – Linting and code quality enforcement
+
+---
+
+## 🚀 Getting Started
+
+Follow these steps to run the project locally.
+
+### 🛠️ Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/istiak19/miniShop
+cd miniShop
+
+# Install dependencies
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### ▶️ Running the App
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+# Start the development server
+npm run dev
 ```
+
+The app will be available at [http://localhost:5173](http://localhost:5173) or the port shown in your terminal.
+
+---
+
+## 🧪 Available Scripts
+
+| Script            | Description                             |
+| ----------------- | --------------------------------------- |
+| `npm run dev`     | Start the Vite dev server               |
+| `npm run build`   | Type-check and build the production app |
+| `npm run preview` | Preview the production build            |
+| `npm run lint`    | Run ESLint on the project codebase      |
+
+---
+
+## ✨ Features
+
+* ⚛️ Component-based architecture with React
+* 🎨 Utility-first responsive design with Tailwind
+* 🧩 Accessible modals and UI primitives via Radix UI
+* 🔄 Global state management using Redux Toolkit
+* 🎯 Type-safe development with TypeScript
+* 💬 Interactive alerts with SweetAlert2
+
+---
+
+## 🔧 Configuration
+
+* Tailwind CSS and DaisyUI are configured via `tailwind.config.js`
+* ESLint is set up with recommended rules for React, React Hooks, and TypeScript
+* TypeScript is configured via `tsconfig.json`
+
+---
+
+## 🔗 Live Demo
+
+🌐 Visit the live application at:
+**[https://minishop-one.vercel.app/](https://minishop-one.vercel.app/)**
