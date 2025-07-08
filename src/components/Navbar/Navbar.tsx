@@ -1,6 +1,11 @@
 import { Link, NavLink } from "react-router";
+import { useSelector } from "react-redux";
+import type { RootState } from "@/redux/store";
 
-const Navbar = () => {
+const Navbar = ({ toggleCart }: { toggleCart: () => void }) => {
+    const cartItems = useSelector((state: RootState) => state.cart.items);
+    const totalQuantity = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+
     const navLinkStyle = ({ isActive }: { isActive: boolean }) =>
         isActive
             ? "!text-blue-500 font-semibold !bg-transparent"
@@ -9,7 +14,20 @@ const Navbar = () => {
     const links = (
         <>
             <li><NavLink to="/" className={navLinkStyle}>Home</NavLink></li>
-            <li><NavLink to="/carts" className={navLinkStyle}>Cart 🛒</NavLink></li>
+            {/* Cart Button triggers toggleCart */}
+            <li>
+                <button
+                    onClick={toggleCart}
+                    className="relative text-black hover:text-blue-500 transition"
+                >
+                    🛒 Cart
+                    {totalQuantity > 0 && (
+                        <span className="absolute -top-2 -right-3 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                            {totalQuantity}
+                        </span>
+                    )}
+                </button>
+            </li>
         </>
     );
 

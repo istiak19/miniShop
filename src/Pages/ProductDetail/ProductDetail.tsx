@@ -2,8 +2,11 @@ import { useParams } from "react-router";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import type { IProduct } from "@/types/Product";
+import { useDispatch } from "react-redux";
+import { addToCart } from "@/redux/feature/cartSlice";
 
 const ProductDetail = () => {
+    const dispatch = useDispatch();
     const { id } = useParams<{ id: string }>();
     const [product, setProduct] = useState<IProduct | null>(null);
 
@@ -41,7 +44,7 @@ const ProductDetail = () => {
                 </ul>
                 <div>
                     <Button
-                        // onClick={() => addToCart(product)}
+                        onClick={() => dispatch(addToCart(product))}
                         className="bg-blue-600 hover:bg-blue-500 text-white font-medium w-full md:w-auto px-6 py-2"
                     >
                         Add to Cart

@@ -2,10 +2,12 @@ import type { IProduct } from "@/types/Product";
 import { useEffect, useState } from "react";
 import { Link } from "react-router";
 import { Button } from "../../components/ui/button";
+import { useDispatch } from "react-redux";
+import { addToCart } from "@/redux/feature/cartSlice";
 
 const Home = () => {
     const [products, setProducts] = useState<IProduct[]>([]);
-
+    const dispatch = useDispatch();
     useEffect(() => {
         const fetchProducts = async () => {
             const res = await fetch("/products.json");
@@ -43,7 +45,7 @@ const Home = () => {
 
                         <div className="p-4 pt-0 mt-auto">
                             <Button
-                                // onClick={() => addToCart(product)}
+                                onClick={() => dispatch(addToCart(product))}
                                 className="w-full bg-blue-600 hover:bg-blue-500 text-white font-semibold"
                             >
                                 Add to Cart
