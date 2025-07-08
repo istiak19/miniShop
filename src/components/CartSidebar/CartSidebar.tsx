@@ -3,6 +3,8 @@ import { IoIosCloseCircleOutline } from "react-icons/io";
 import { Button } from "@/components/ui/button";
 import type { RootState } from "@/redux/store";
 import { increaseQuantity, decreaseQuantity, removeFromCart } from "@/redux/feature/cartSlice";
+import { useState } from "react";
+import CheckoutModal from "../CheckoutModal/CheckoutModal";
 
 const CartSidebar = ({
     isOpen,
@@ -18,6 +20,7 @@ const CartSidebar = ({
         (sum, item) => sum + item.product.price * item.quantity,
         0
     );
+    const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
 
     return (
         <div>
@@ -103,12 +106,15 @@ const CartSidebar = ({
                             <span>Total:</span>
                             <span>${total.toFixed(2)}</span>
                         </div>
-                        <Button className="w-full bg-blue-500 hover:bg-blue-400 cursor-pointer text-white">
+                        <Button
+                            onClick={() => setIsCheckoutOpen(true)}
+                            className="w-full bg-blue-500 hover:bg-blue-400 cursor-pointer text-white">
                             Checkout
                         </Button>
                     </div>
                 )}
             </aside>
+            <CheckoutModal open={isCheckoutOpen} onClose={() => setIsCheckoutOpen(false)} />
         </div>
     );
 };

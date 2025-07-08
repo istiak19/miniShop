@@ -39,14 +39,13 @@ const Home = () => {
                                     {product.title}
                                 </h3>
                                 <p className="text-blue-600 font-semibold">${product.price}</p>
-                                {/* <p className="text-sm text-gray-500 mt-1 line-clamp-2">{product.description}</p> */}
                             </div>
                         </Link>
 
                         <div className="p-4 pt-0 mt-auto">
                             <Button
                                 onClick={() => dispatch(addToCart(product))}
-                                className="w-full bg-blue-600 hover:bg-blue-500 text-white font-semibold"
+                                className="w-full bg-blue-500 hover:bg-blue-400 text-white font-semibold cursor-pointer"
                             >
                                 Add to Cart
                             </Button>

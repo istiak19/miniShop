@@ -45,7 +45,7 @@ const ProductDetail = () => {
                 <div>
                     <Button
                         onClick={() => dispatch(addToCart(product))}
-                        className="bg-blue-600 hover:bg-blue-500 text-white font-medium w-full md:w-auto px-6 py-2"
+                        className="bg-blue-500 hover:bg-blue-400 text-white font-medium w-full md:w-auto px-6 py-2 cursor-pointer"
                     >
                         Add to Cart
                     </Button>
